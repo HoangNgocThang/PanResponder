@@ -1,5 +1,5 @@
-import { View, Text, PanResponder } from 'react-native';
-import React, { useEffect } from 'react';
+import { View, Text, PanResponder } from "react-native";
+import React, { useEffect } from "react";
 
 const ExampleComponent = () => {
   useEffect(() => {
@@ -32,7 +32,7 @@ const ExampleComponent = () => {
         // Returns whether this component should block native components from becoming the JS
         // responder. Returns true by default. Is currently only supported on android.
         return true;
-      },
+      }
     });
     return () => {};
   }, []);
@@ -43,7 +43,14 @@ const ExampleComponent = () => {
 
   return (
     <View
-      style={{ width: 100, height: 100, backgroundColor: 'red' }}
+      style={{
+        width: "100%",
+        height: 100,
+        backgroundColor: "red",
+        position: "absolute",
+        bottom: 0,
+        left: 0
+      }}
       onPanResponderMove={_onPanResponderMove}
     >
       <Text>aaa</Text>

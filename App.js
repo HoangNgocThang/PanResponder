@@ -1,10 +1,9 @@
 import React, { Fragment, useState } from "react";
 import { SafeAreaView, StatusBar, ScrollView, Text, View } from "react-native";
 import ExampleComponent from "./src/ExampleComponent";
+import PanComponent from "./src/PanComponent";
 
 const App = () => {
-  const inputAccessoryViewID = "uniqueID";
-  const [text, setText] = useState("");
   const [show, setShow] = useState(true);
 
   const _onScrollEndDrag = () => {
@@ -17,8 +16,10 @@ const App = () => {
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
+      <SafeAreaView
+        style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+      >
+        {/* <ScrollView
           onScrollEndDrag={_onScrollEndDrag}
           onScrollBeginDrag={_onScrollBeginDrag}
         >
@@ -28,7 +29,9 @@ const App = () => {
             <Text>1</Text>
           </View>
         </ScrollView>
-        {show ? <ExampleComponent /> : null}
+        {show ? <ExampleComponent /> : null} */}
+        {/* <ExampleComponent /> */}
+        <PanComponent />
       </SafeAreaView>
     </Fragment>
   );

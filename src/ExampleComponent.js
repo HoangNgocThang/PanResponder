@@ -1,9 +1,9 @@
-import { View, Text, PanResponder } from "react-native";
+import { View, Text, PanResponder, StyleSheet } from "react-native";
 import React, { useEffect } from "react";
 
 const ExampleComponent = () => {
   useEffect(() => {
-    const pan = PanResponder.create({
+    PanResponder.create({
       // Ask to be the responder:
       onStartShouldSetPanResponder: (evt, gestureState) => true,
       onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
@@ -42,20 +42,20 @@ const ExampleComponent = () => {
   };
 
   return (
-    <View
-      style={{
-        width: "100%",
-        height: 100,
-        backgroundColor: "red",
-        position: "absolute",
-        bottom: 0,
-        left: 0
-      }}
-      onPanResponderMove={_onPanResponderMove}
-    >
+    <View style={styles.contaier} onPanResponderMove={_onPanResponderMove}>
       <Text>aaa</Text>
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  contaier: {
+    width: "100%",
+    height: 300,
+    backgroundColor: "red",
+    position: "absolute",
+    bottom: 0,
+    left: 0
+  }
+});
 export default ExampleComponent;

@@ -1,0 +1,12 @@
+      Object gestureState:
+      stateID: 0.40056668972202036 //id của gestureState
+      moveX: 0 // toạ độ mới nhất của lần chạm gần nhất
+      moveY: 0 // toạ độ mới nhất của lần chạm gần nhất
+      x0: 0 //toạ độ của lần chạm trên màn hình
+      y0: 0  //toạ độ của lần chạm trên màn hình
+      dx: 0 // khoảng cách cộng dồn kể từ khi bắt đầu chạm
+      dy: 0 // khoảng cách cộng dồn kể từ khi bắt đầu chạm
+      vx: 0 //vận tốc của cử chỉ chạm
+      vy: 0 //vận tốc của cử chỉ chạm
+      numberActiveTouches: 0 //số lần chạm hiện tại trên màn hình
+      
